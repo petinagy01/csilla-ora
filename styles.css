@@ -1,0 +1,45 @@
+:root{
+  --accent:#c0392b;
+  --bg:#f7f7f7;
+  --card:#ffffff;
+  --text:#222;
+  --muted:#666;
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);}
+
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:var(--card);box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+.logo{font-weight:700;color:var(--accent);font-size:1.2rem}
+nav a{margin-left:14px;text-decoration:none;color:var(--text)}
+nav a:hover{color:var(--accent)}
+
+.container{max-width:1100px;margin:28px auto;padding:0 16px}
+
+.hero{background:linear-gradient(90deg, rgba(192,57,43,0.06), transparent);padding:28px;border-radius:8px;margin-bottom:18px}
+.hero h1{margin:0 0 8px}
+.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;border:none;cursor:pointer}
+.features{display:flex;gap:12px;margin-top:18px}
+.card{background:var(--card);padding:14px;border-radius:8px;flex:1;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+
+.shop-grid{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+.viragsdiv{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.kosarBox{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+.kosarBox ul{padding-left:16px}
+.kartya{background:var(--card);padding:10px;border-radius:8px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.kartya img{width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px}
+.kartya h3{margin:6px 0}
+.kartya p{color:var(--muted);margin:6px 0}
+.kartya button{margin-top:8px;padding:8px 10px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer}
+
+.footer{text-align:center;padding:18px;color:var(--muted);margin-top:28px;font-size:0.95rem}
+
+.kontakt-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:800px){
+  .shop-grid{grid-template-columns:1fr}
+  .kontakt-grid{grid-template-columns:1fr}
+  .features{flex-direction:column}
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virágbolt - Bolt</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Kis kiegészítő stílusok a megrendeléshez */
+    .modal {
+      position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:1000;
+    }
+    .modal.open{display:flex}
+    .modal-content{background:#fff;padding:18px;border-radius:10px;max-width:520px;width:100%;box-shadow:0 6px 24px rgba(0,0,0,0.2)}
+    .flex-row{display:flex;gap:10px;align-items:center}
+    .input, input, textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+    .small{width:90px}
+    .kosar-actions{display:flex;gap:8px;margin-top:10px}
+    .btn.secondary{background:#555;color:#fff}
+    .qty-btn{padding:4px 8px;border-radius:6px;border:none;background:#eee;cursor:pointer}
+    .kosar-list li{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed #eee}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Virágbolt</div>
+    <nav>
+      <a href="index.html">Kezdőlap</a>
+      <a href="shop.html">Bolt</a>
+      <a href="kontakt.html">Kapcsolat</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Vásárolj virágot</h2>
+
+    <section id="viragokSection" class="shop-grid">
+      <div id="viragsdiv" class="viragsdiv">Betöltés...</div>
+
+      <aside class="kosarBox">
+        <h3>Kosár</h3>
+        <ul id="kosar" class="kosar-list"></ul>
+        <div id="vegdiv"><strong>Összesen</strong>: 0 Ft</div>
+
+        <div class="kosar-actions">
+          <button id="clearBtn" class="btn secondary">Kosár ürítése</button>
+          <button id="openOrderBtn" class="btn">Megrendelés</button>
+        </div>
+
+        <hr />
+        <h4>Korábbi megrendelések</h4>
+        <ul id="ordersList"></ul>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Megrendelés modal -->
+  <div id="orderModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+      <h3 id="orderTitle">Megrendelés leadása</h3>
+
+      <form id="orderForm">
+        <label><strong>Név</strong></label>
+        <input type="text" id="buyerName" required />
+
+        <label><strong>Telefonszám</strong></label>
+        <input type="tel" id="buyerPhone" required />
+
+        <label><strong>Cím</strong></label>
+        <input type="text" id="buyerAddress" required />
+
+        <label><strong>Megjegyzés</strong></label>
+        <textarea id="buyerNote" rows="3" placeholder="Pl. szállítási idő vagy köszönő üzenet"></textarea>
+
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+          <button type="button" id="cancelOrder" class="btn secondary">Mégse</button>
+          <button type="submit" class="btn">Megrendelés elküldése</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script-shop.js"></script>
+</body>
+</html>
