@@ -4,7 +4,7 @@
     const kosart = [];
 
     async function betoltViragok() {
-      const valasz = await fetch('viragok.json');
+      const valasz = await fetch('json.json');
       const virag = await valasz.json();
       mutatViragok(virag);
     }
