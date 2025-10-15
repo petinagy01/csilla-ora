@@ -1,0 +1,35 @@
+.carousel-container {
+  width: 80%;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.prev { left: 0.5rem; }
+.next { right: 0.5rem; }

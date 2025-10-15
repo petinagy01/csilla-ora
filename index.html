@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Virágbolt - Kezdőlap</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="styles" href="carousel/carousel.css">
+  <script src="carousel/carousel.js"></script>
+  <link rel="stylesheet" href="kupon/kupon.css"/>
+  <script src="kupon/kupon.js"></script>
 </head>
 <body>
   <header class="topbar">
@@ -16,12 +20,33 @@
     </nav>
   </header>
 
+  <div id="couponModal" class="coupon-modal">
+  <div class="modal-content">
+    <h2>Különleges Kupon!</h2>
+    <p>15% kedvezmény minden vásárlásból a mai napon.</p>
+    <button id="closeCoupon">Bezár</button>
+  </div>
+</div>
+
+
   <main class="container">
     <section class="hero">
       <h1>Üdvözlünk a Virágboltban</h1>
       <p>Friss vágott virágok, csokrok és alkalmi kompozíciók — helyben és házhoz szállítva.</p>
       <a class="btn" href="shop.html">Nézd meg a kínálatot</a>
     </section>
+
+    <section class="carousel-container">
+  <div class="carousel">
+    <button class="prev">‹</button>
+    <div class="slides">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.JU6nHf261YIUwhR9BcMWuQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Virág 1">
+      <img src="https://megaport.hu/media/king-include/uploads/2022/11/143080-bouquet-flowers-viragok-viragcsokor.jpg" alt="Virág 2">
+      <img src="https://tse3.mm.bing.net/th/id/OIP._Uklpi0DT80w3nRi8OJZvAHaEW?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Virág 3">
+    </div>
+    <button class="next">›</button>
+  </div>
+</section>
 
     <section class="features">
       <div class="card">
@@ -38,7 +63,7 @@
       </div>
     </section>
   </main>
-
+  
   <footer class="footer">
     <p>&copy; 2025 Virágbolt • Minden jog fenntartva</p>
   </footer>

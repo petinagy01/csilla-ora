@@ -43,3 +43,42 @@ nav a:hover{color:var(--accent)}
   .kontakt-grid{grid-template-columns:1fr}
   .features{flex-direction:column}
 }
+.kontakt-form {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.kontakt-form h4 {
+  margin-bottom: 1rem;
+}
+
+.kontakt-form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.kontakt-form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.kontakt-form button:hover {
+  background: #0069d9;
+}
+
